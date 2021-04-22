@@ -16,8 +16,8 @@ A basic GitHub repository template for initializing open source projects on a si
 
 ## Description
 
-Who does not love Space? 
-The DataSet was scraped from https://nextspaceflight.com/launches/past/?page=1 and includes all the space missions since the beginning of Space Race (1957).
+Is your heart healthy enough? Do you want to predict whether you risk a heat attack? Then this project is for you!<br/>
+Use your ML skills to predict the chances of a person will suffer from a heart attack. Don't forget to try to increase its accuracy!
 
 ## Project structure
 
