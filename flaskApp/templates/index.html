@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart-Saver</title>
+</head>
+<body>
+    <center>
+   <h1>Welcome to Heart-Saver</h1>
+   <form method="POST" action="{{url_for('predict_heart_disease')}}">
+    Age<input type="text" name="age"></input><br>
+    Sex<input type="text" name="sex"></input><br>
+    cp<input type="text" name="cp"></input><br>
+    trestbps<input type="text" name="trestbps"></input><br>
+    chol<input type="text" name="chol"></input><br>
+    fbs<input type="text" name="fbs"></input><br>
+    restecg<input type="text" name="restecg"></input><br>
+   thalach<input type="text" name="thalach"></input><br>
+   exang<input type="text" name="exang"></input><br>
+   oldpeak<input type="text" name="oldpeak"></input><br>
+   slope<input type="text" name="slope"></input><br>
+   ca<input type="text" name="ca"></input><br>
+   thal<input type="text" name="thal"></input><br>
+   <button type="submit", value="predict">Submit</button>
+    </center>
+</form>
+</body>
+</html>
