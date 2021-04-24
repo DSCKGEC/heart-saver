@@ -9,9 +9,11 @@ import pandas as pd
 import numpy as np
 import pickle
 
+with open('gbc.pkl','rb') as f:
+    gbc=pickle.load(f)
+
 app=Flask(__name__)
-with open('xgb.pkl','rb') as f:
-    xgb=pickle.load(f)
+
 
 @app.route('/')    
 def home():
@@ -37,7 +39,7 @@ def predict_heart_disease():
     
     pvalues=[[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]]
     pvalues=np.array(pvalues).reshape((1,-1))
-    pred=xgb.predict(pvalues)
+    pred=gbc.predict(pvalues)
     predf=float(pred)
     return render_template('result.html', data=predf)
 
@@ -45,7 +47,7 @@ def predict_heart_disease():
 def predict_heart_disease_file():
     df_test=pd.read_csv(request.files.get("file"))
     
-    prediction=xgb.predict(df_test)
+    prediction=gbc.predict(df_test)
     return str((list(prediction)))
     
 if (__name__=='__main__'):
