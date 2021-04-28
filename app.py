@@ -4,6 +4,7 @@ Created on Wed Apr 21 19:18:42 2021
 
 @author: Agni Sain
 """
+# Importing the necessary Libraries
 from flask import Flask,request,render_template
 import pandas as pd
 import numpy as np
@@ -11,15 +12,15 @@ import pickle
 
 with open('gbc.pkl','rb') as f:
     gbc=pickle.load(f)
-
+# app initiated
 app=Flask(__name__)
 
-
+# homepage for the app defined
 @app.route('/')    
 def home():
     return render_template("index.html")   
 
-    
+# prediction page called to display the predictions     
 @app.route('/predict',methods=["POST"])
 def predict_heart_disease():
     

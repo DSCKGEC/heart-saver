@@ -17,14 +17,26 @@ A basic GitHub repository template for initializing open source projects on a si
 ## Description
 
 Is your heart healthy enough? Do you want to predict whether you risk a heat attack? Then this project is for you!<br/>
-Use your ML skills to predict the chances of a person will suffer from a heart attack. Don't forget to try to increase its accuracy!
+Use your ML skills to predict the chances of a person will suffer from a heart attack.<br/> Don't forget to try to increase its accuracy!
 
 ## Project structure
 
 ```
-  ├── datasets/         Dataset of Space Missions.
-  ├── notebooks/        Contains the jupyter notebook files of Space Missions.
+  ├── datasets/         Dataset of heart-saver.
+  ├── notebooks/        Contains the jupyter notebook files of heart-saver.
+      ├── heart_nb      .ipynb file containing the notebook used for the gbc.pkl file  
+  ├── templates/        Contains the HTML files for web app.
+      ├── index.html    Homepage for the web app.
+      ├── result.html   Result page for the predictions.    
+  ├── app.py            Contains the flask API.
+  ├── gbc.pkl           Contains the pickled file for app.py.
+  ├── Procfile          Contains the information for deployment.
+  ├── requirements.txt  Contains the modules and their versions required to setup the web app.
 ```
+# Datasets and Notebooks
+
+- `heart-saver.csv` is the dataset used for the notebook `heat_nb.ipynb`
+- `gbc.pkl` is the pickled file made from `heart_nb.ipynb`
 
 ## Getting started
 
@@ -35,26 +47,31 @@ Use your ML skills to predict the chances of a person will suffer from a heart a
  
   1. A web browser. 
 
-         OR
+  2. A standard code-editor (VS Code, Sublime Text, Spyder, Pycharm).
          
-  3. Anaconda software.
+  3. Anaconda software/ Google Colab/ Kaggle notebook.
 
 #### Knowledge Needed
 - Very basic understanding of git and github:
 
-    1.  What are repositories (local - remote - upstream), issues, pull requests
-    2.   How to clone a repository, how to fork a repository, how to set upstreams
-    3.   Adding, committing, pulling, pushing changes to remote repositories
+    1.  What are repositories (local - remote - upstream), issues, pull requests.
+    2.   How to clone a repository, how to fork a repository, how to set upstreams.
+    3.   Adding, committing, pulling, pushing changes to remote repositories.
 
-- For EDA and Visualisation
+- For Visualisation and models implementation:
  
     1. Basic syntax and working of ```python```.(This is a must)
     2. Basic knowledge of ```pandas``` library. [Reading this blog might help.](https://www.dataquest.io/blog/pandas-python-tutorial/)
     3. Basic knowledge of ```matplotlib``` library. [Reading this blog might help.](https://blog.quantinsti.com/python-matplotlib-tutorial/)
     4. Basic knowledge of ```seaborn``` library. [Reading this blog might help.](https://www.mygreatlearning.com/blog/seaborn-tutorial/)
     5. Basic knowledge of ```scikit learn``` library. [Reading this blog might help.](https://www.dataquest.io/blog/sci-kit-learn-tutorial/)
+    6. Knowledge of various ML models such as Logistic Regression, Naive Bayes, Extreme Gradient Boost, etc. and use of Flask.
 
-  However the code is well explained, so anyone knowing the basics of Python can get a idea of what's happenning and contribute to this.
+- For the web app
+    1. HTML
+    2. CSS   
+
+  However the code is well explained, so anyone knowing the basics of Python can get a idea of what's happening and contribute to this.
 
 ### Installing
 
@@ -63,25 +80,60 @@ There are two ways of running the code.
       - Head on to [Google colab](https://www.colab.research.google.com)
       - Then click on ```Upload Notebook``` Tab.
       - Upload the notebook that you got from this repo.
-        ![Colab-1](https://res.cloudinary.com/codehackerone/image/upload/v1618463907/ML/colab-2_c14swf.png)
-      - Connect with the runtime.
-        ![Colab-2](https://res.cloudinary.com/codehackerone/image/upload/v1618464955/ML/Colab-3_da822c.png)
+        ![Imgur](https://i.imgur.com/a4zM1GW.png)
+
+      - Connect with the runtime, wait for a while. You will see the RAM and Disk info just below.
+        ![Imgur](https://i.imgur.com/YYbpnMv.png)
+
       - Upload your dataset.
-        ![Colab-3](https://res.cloudinary.com/codehackerone/image/upload/v1618464958/ML/Colab-04_sxfyjx.png)
+        ![Imgur](https://i.imgur.com/YpgxLfE.png)
+
       - Then Click on ```Run All```.
-        ![Colab-4](https://res.cloudinary.com/codehackerone/image/upload/v1618465413/ML/colab-5_i92bzp.png)
+        ![Imgur](https://i.imgur.com/sr8FHWB.png)
+
       - Start Editing.
 
   2. You can also run the code locally in your computer by installing Anaconda.
       - Install Anaconda. [Follow these steps to install Anaconda on your computer](https://www.edureka.co/blog/python-anaconda-tutorial/#:~:text=on%20our%20systems.-,Installation%20And%20Setup,the%20instructions%20in%20the%20setup.)
       - Install jupyter notebook using ```conda```. [Follow these steps to install jupyter notebook.](https://test-jupyter.readthedocs.io/en/latest/install.html)
-      - Make sure to install ```pandas```,```matplotlib```,```seaborn``` and ```scikit-learn``` to run the notebook.
+      - Make sure to install ```pandas```, ```matplotlib```, ```seaborn``` and ```scikit-learn``` to run the notebook.
       - Start Editing.
+
+  3. For the web app
+      - You can use any standard editor to edit the app.py file.
+      - Make sure to install all the necessary modules and check their versions from `requirements.txt`.
 ## Live demo
 
-TO BE ADDED SOON
+Here is the web app for heart-saver.<br>
+https://heart-saver.herokuapp.com/
+
+- Homepage: Contains the necessary boxes to fill the details as mentioned in [Attribute Information](#Attribute-Information).
+  ![Imgur](https://i.imgur.com/lVnUUhI.png)
+- Click on **Submit** button.
+- See the results/predictions.
+  ![Imgur](https://i.imgur.com/MEpdhtM.png)
+
+### Attribute Information
+1. age (in years)
+2. sex (male=1, female=0)
+3. chest pain type (4 values)
+4. resting blood pressure
+5. serum cholestoral in mg/dl
+6. fasting blood sugar > 120 mg/dl
+7. resting electrocardiographic results (values 0,1,2)
+8. maximum heart rate achieved
+9. exercise induced angina
+10. oldpeak = ST depression induced by exercise relative to rest
+11. the slope of the peak exercise ST segment
+12. number of major vessels (0-3) colored by flourosopy
+13. thal: 0 = normal; 1 = fixed defect; 2 = reversable defect
+14. target: 0= less chance of heart attack 1= more chance of heart attack
+
 
 ## Contributing
+
+### IMPORTANT
+Make sure you first **fork the repo** and then **clone** it.
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. 
 Any contributions you make are **greatly appreciated**. 
