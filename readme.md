@@ -1,6 +1,6 @@
 # Heart-Saver
 
-[![Contributors](https://img.shields.io/github/contributors/dsckgec/project-template.svg)](https://github.com/dsckgec/heart-saver/graphs/contributors) [![Forks](https://img.shields.io/github/forks/dsckgec/project-template.svg)](https://github.com/dsckgec/heart-saver/network/members) [![Issues](https://img.shields.io/github/issues/dsckgec/project-template.svg)](https://github.com/dsckgec/heart-saver/issues) [![Pull Request](https://img.shields.io/github/issues-pr-closed-raw/dsckgec/project-template)](https://github.com/dsckgec/heart-saver/pulls)
+[![Contributors](https://img.shields.io/github/contributors/dsckgec/heart-saver.svg)](https://github.com/dsckgec/heart-saver/graphs/contributors) [![Forks](https://img.shields.io/github/forks/dsckgec/heart-saver.svg)](https://github.com/dsckgec/heart-saver/network/members) [![Issues](https://img.shields.io/github/issues/dsckgec/heart-saver.svg)](https://github.com/dsckgec/heart-saver/issues) [![Pull Request](https://img.shields.io/github/issues-pr-closed-raw/dsckgec/heart-saver)](https://github.com/dsckgec/heart-saver/pulls)
 
 
 A basic GitHub repository template for initializing open source projects on a single click.
