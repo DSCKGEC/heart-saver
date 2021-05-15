@@ -77,7 +77,7 @@ Use your ML skills to predict the chances of a person will suffer from a heart a
 
 There are two ways of running the code.
   1. Running the code on web browser.(Google Colab) [Recommended]
-      - Head on to [Google colab](https://www.colab.research.google.com)
+      - Head on to [Google colab](https://colab.research.google.com/notebooks/intro.ipynb)
       - Then click on ```Upload Notebook``` Tab.
       - Upload the notebook that you got from this repo.
         ![Imgur](https://i.imgur.com/a4zM1GW.png)

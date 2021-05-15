@@ -6,24 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart-Saver</title>
 </head>
-<body>
+<body bgcolor= "Grey">
     <center>
-   <h1>Welcome to Heart-Saver</h1>
-   <form method="POST" action="{{url_for('predict_heart_disease')}}">
-    Age<input type="text" name="age"></input><br>
-    Sex<input type="text" name="sex"></input><br>
-    cp<input type="text" name="cp"></input><br>
-    trestbps<input type="text" name="trestbps"></input><br>
-    chol<input type="text" name="chol"></input><br>
-    fbs<input type="text" name="fbs"></input><br>
-    restecg<input type="text" name="restecg"></input><br>
-   thalach<input type="text" name="thalach"></input><br>
-   exang<input type="text" name="exang"></input><br>
-   oldpeak<input type="text" name="oldpeak"></input><br>
-   slope<input type="text" name="slope"></input><br>
-   ca<input type="text" name="ca"></input><br>
-   thal<input type="text" name="thal"></input><br>
-   <button type="submit", value="predict">Submit</button>
+    <h1>Welcome to Heart-Saver</h1>
+    <form method="POST" action="{{url_for('predict_heart_disease')}}">
+    <label for="age"><b>Age</b></label>
+    <input type="number" id="age" name="age" min="18" max="99" value="18"><br>
+    <b>Sex</b>
+    <input type="radio" name="sex" id="female" value="0">
+    <label for="female">female</label>
+    <input type="radio" name="sex" id ="male" value="1">
+    <label for="male">male</label><br>
+    <label for="cp"><b>Chest pain type</b></label>
+    <input type="range" id="cp" name="cp" min="0" max="4" step="1"><br>
+    <b>trestbps</b><input type="text" name="trestbps"></input><br>
+    <b>chol</b><input type="text" name="chol"></input><br>
+    <b>fbs</b><input type="text" name="fbs"></input><br>
+    <label for="restecg"><b>restecg</b></label>
+    <input type="range" id="restecg" name="restecg" min="0" max="2" step="1"><br>
+    <b>thalach</b><input type="text" name="thalach"></input><br>
+    <b>exang</b><input type="text" name="exang"></input><br>
+    <b>oldpeak</b><input type="text" name="oldpeak"></input><br>
+    <b>slope</b><input type="text" name="slope"></input><br>
+    <b>ca</b><input type="text" name="ca"></input><br>
+    <b>thal</b>
+    <input type="radio" name="thal" id="normal" value="0">
+    <label for="normal">normal</label>
+    <input type="radio" name="thal" id ="fixed defect" value="1">
+    <label for="fixed defect">fixed defect</label>
+    <input type="radio" name="thal" id="reversible defect" value="2">
+    <label for="reversible defect">reversible defect</label><br>
+    <input type="reset">
+    <button type="submit", value="predict">Submit</button>
     </center>
 </form>
 </body>
