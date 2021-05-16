@@ -6,7 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart-Saver</title>
 </head>
-<body bgcolor= "Grey">
+<style>
+    body {background-color: powderblue;}
+    h1  {
+        color: blue;
+        font-family: verdana;
+        font-size: 300%;
+        }
+    input[type = text] {
+        width: 10%;
+        padding: 3px 5px;
+        margin: 5px 0;
+        background-color:blanchedalmond; 
+        color: white;
+        }
+    input[type=text]:focus {
+        background-color: lightseagreen;
+    } 
+    input[type=reset] {
+        background-color: #af4c7d;
+        border: none;
+        color: white;
+        padding: 3px 5px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+    button[type=submit] {
+        padding:3px 5px; 
+        background:rgb(17, 185, 59); 
+        border: none;
+        cursor:pointer;
+        margin: 4px 2px;
+    }
+    input[type=range] {
+        cursor: pointer;
+    }
+    input[type="radio"] + label {
+        color:#7c1010;
+        font-family:Arial;
+        font-size:14px;
+    }
+</style>
+<body>
     <center>
     <h1>Welcome to Heart-Saver</h1>
     <form method="POST" action="{{url_for('predict_heart_disease')}}">
@@ -18,14 +60,32 @@
     <input type="radio" name="sex" id ="male" value="1">
     <label for="male">male</label><br>
     <label for="cp"><b>Chest pain type</b></label>
-    <input type="range" id="cp" name="cp" min="0" max="4" step="1"><br>
+    <input type="radio" name="cp" id="no pain" value="0">
+    <label for="no pain">no pain</label>
+    <input type="radio" name="cp" id ="light pain" value="1">
+    <label for="light pain">light pain</label>
+    <input type="radio" name="cp" id="moderate pain" value="2">
+    <label for="moderate pain">moderate pain</label>
+    <input type="radio" name="cp" id="high pain" value="3">
+    <label for="high pain">high pain</label>
+    <input type="radio" name="cp" id="severe pain" value="4">
+    <label for="severe pain">severe pain</label><br>
     <b>trestbps</b><input type="text" name="trestbps"></input><br>
     <b>chol</b><input type="text" name="chol"></input><br>
-    <b>fbs</b><input type="text" name="fbs"></input><br>
-    <label for="restecg"><b>restecg</b></label>
-    <input type="range" id="restecg" name="restecg" min="0" max="2" step="1"><br>
+    <b>fasting blood sugar(mg/dl)</b>
+    <input type="radio" name="fbs" id="120-" value="0">
+    <label for="120-">less than or equal to 120</label>
+    <input type="radio" name="fbs" id ="120+" value="1">
+    <label for="120+">greater than 120</label><br>
+    <label for="restecg"><b>resting ecg result</b></label>
+    <input type="range" id="restecg" name="restecg" value="0" max="2" step="1" oninput="num.value = this.value">
+    <output id="num">0</output><br>
     <b>thalach</b><input type="text" name="thalach"></input><br>
-    <b>exang</b><input type="text" name="exang"></input><br>
+    <b>exercise induced angina</b>
+    <input type="radio" name="exang" id="no" value="0">
+    <label for="no">No</label>
+    <input type="radio" name="exang" id ="yes" value="1">
+    <label for="yes">Yes</label><br>
     <b>oldpeak</b><input type="text" name="oldpeak"></input><br>
     <b>slope</b><input type="text" name="slope"></input><br>
     <b>ca</b><input type="text" name="ca"></input><br>
