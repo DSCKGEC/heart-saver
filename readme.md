@@ -108,10 +108,11 @@ Here is the web app for heart-saver.<br>
 https://heart-saver.herokuapp.com/
 
 - Homepage: Contains the necessary boxes to fill the details as mentioned in [Attribute Information](#Attribute-Information).
-  ![Imgur](https://i.imgur.com/lVnUUhI.png)
+  <img width="1440" alt="Screenshot 2021-05-25 at 18 31 52" src="https://user-images.githubusercontent.com/76846542/119505416-8f2a9080-bd8a-11eb-890f-e496ec23d7b3.png">
 - Click on **Submit** button.
 - See the results/predictions.
-  ![Imgur](https://i.imgur.com/MEpdhtM.png)
+  <img width="1440" alt="Screenshot 2021-05-25 at 18 32 07" src="https://user-images.githubusercontent.com/76846542/119505437-9487db00-bd8a-11eb-8759-7e43241f900d.png">
+
 
 ### Attribute Information
 1. age (in years)
